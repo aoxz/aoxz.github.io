@@ -20,7 +20,7 @@
                 console.log('error: ' + err);
             });
 
-        var lines = data2.split(/\n/);
+        var lines = data2.split('\n');
         var wrapped = "[" + lines.join(",") + "]";
         var obj = JSON.parse(wrapped);
         console.log(obj);
