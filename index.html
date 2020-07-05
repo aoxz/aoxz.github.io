@@ -9,7 +9,7 @@
 <body>
     <div id="myData"></div>
     <script>
-        fetch('https://raw.githubusercontent.com/aoxz/amazon-scraper/master/output.jsonl?token=AQFVVIFH5XD5HCTVFWQPFQS7AGDTM')
+        fetch('https://raw.githubusercontent.com/aoxz/amazon-scraper/master/output.jsonl')
             .then(function (response) {
                 return response.json();
             })
@@ -19,6 +19,7 @@
             .catch(function (err) {
                 console.log('error: ' + err);
             });
+
         function appendData(data) {
             var mainContainer = document.getElementById("myData");
             for (var i = 0; i < data.length; i++) {
