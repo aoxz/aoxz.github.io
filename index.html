@@ -14,24 +14,15 @@
                 return response.json();
             })
             .then(function (data) {
-                appendData(data);
+                var data2 = appendData(data);
             })
             .catch(function (err) {
                 console.log('error: ' + err);
             });
 
-        var lines = data.split(/\n/);
+        var lines = data2.split(/\n/);
         var wrapped = "[" + lines.join(",") + "]";
         var obj = JSON.parse(wrapped);
         console.log(obj);
-/***
-        function appendData(data) {
-            var mainContainer = document.getElementById("myData");
-            for (var i = 0; i < data.length; i++) {
-                var div = document.createElement("div");
-                div.innerHTML = 'Name: ' + data[i].firstName + ' ' + data[i].lastName;
-                mainContainer.appendChild(div);
-            }
-        }***/
     </script>
 </body>
