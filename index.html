@@ -14,13 +14,13 @@
                 return response.json();
             })
             .then(function (data) {
-                var data2 = appendData(data);
+                appendData(data);
             })
             .catch(function (err) {
                 console.log('error: ' + err);
             });
 
-        var lines = data2.split('\n');
+        var lines = data.split('\n');
         var wrapped = "[" + lines.join(",") + "]";
         var obj = JSON.parse(wrapped);
         console.log(obj);
