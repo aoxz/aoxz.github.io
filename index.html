@@ -10,9 +10,7 @@
     <div id="myData"></div>
     <script>
         fetch('https://raw.githubusercontent.com/aoxz/amazon-scraper/master/output.jsonl')
-        const obj = JSON.parse(json);
-
-        console.log(obj.name);
-        console.log(obj.sales_rank);
+            .then(response => response.json())
+            .then(data => console.log(data));
     </script>
 </body>
