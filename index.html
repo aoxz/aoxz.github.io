@@ -9,7 +9,12 @@
 <body>
     <div id="myData"></div>
     <script>
-        fetch('https://raw.githubusercontent.com/aoxz/amazon-scraper/master/output.jsonl')
+        fetch('https://raw.githubusercontent.com/aoxz/amazon-scraper/master/output.jsonl', {
+      headers : { 
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+       }
+    }))
             .then(response => response.json())
             .then(data => console.log(data));
     </script>
